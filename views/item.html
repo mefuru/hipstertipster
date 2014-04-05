@@ -1,0 +1,23 @@
+{% extends '../views/layout.html' %}
+
+{% block content %}
+	<br /><br /><br /><br /><br /><br />
+	<div class="container voting-question">	
+		<img src="assets/img/voting/1.jpg" class="img-thumbnail" style="float: right;">
+		<h1>Title</h1>
+		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor turpis a quam sollicitudin, id venenatis erat scelerisque. Donec semper est fermentum dapibus vulputate. </h4>
+	</div>
+
+	<div class="container">
+	</div><br /><br />
+
+
+
+	<div id="gmap_canvas" style="height:500px; width:100%;"></div>
+	<script>
+		init_map(14, new google.maps.LatLng(40.8054567, -73.96547470000002), "gmap_canvas")
+	</script>
+<br /><br />
+
+
+{% endblock %}

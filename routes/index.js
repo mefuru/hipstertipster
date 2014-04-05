@@ -3,25 +3,29 @@ var MongoClient = require('mongodb').MongoClient;
 var keys = require("../keys.js");
 var uri = process.env.MONGOLAB_URI || keys.MONGOURI;
 
-exports.index = function(req, res){
-    res.render("index");
-};
-
 exports.about = function(req, res){
     res.render("about");
 };
 
-exports.feed = function(req, res){
+exports.index = function(req, res){
     MongoClient.connect(uri, function(err, db) {
         if(err) throw err;
         var votes = db.collection("votes");
         var cursor = votes.find({votes: {$lt: 10 }});
         cursor.toArray(function(err, docs) {
             if(err) throw err;
-            res.render("feed", {events: docs});
+            res.render("index", {events: docs});
         });
         db.close()
     });
+});
+
+exports.quiz = function(req, res){
+    res.render("quiz");
+};
+
+exports.item = function(req, res){
+    res.render("item");
 };
 
 exports.contact = function(req, res){
