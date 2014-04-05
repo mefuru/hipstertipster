@@ -1,7 +1,6 @@
 // Dependencies
 var MongoClient = require('mongodb').MongoClient;
 var keys = require("./keys.js");
-var ObjectID = require('mongodb').ObjectID;
 
 var uri = process.env.MONGOLAB_URI || keys.MONGOURI;
 
@@ -38,15 +37,29 @@ var events = [
     {title: 'Salt beef sandwhichs and cocktails at Mishkin\'s', img: '30.jpg', desc: 'Cocktails at this homage to a Jewish Deli'}
 ];
 
-events.forEach(function (event) {
+function loadEvents() {
     MongoClient.connect(uri, function (err, db) {
         if (err) throw err;
         var votes = db.collection("votes");
-        votes.insert({title: event.title, imgFileName: event.img, description: event.desc, votes: 0}, function (err, doc) {
-            if (err) throw err;
-            console.log(doc);
-            db.close();
+        var i = events.length;
+
+        events.forEach(function (event) {
+            votes.insert({title: event.title, imgFileName: event.img, description: event.desc, votes: 0}, function (err, doc) {
+                if (err) throw err;
+                console.log(doc);
+                i--;
+                if (i === 0) {
+                    db.close();
+                }
+            });
         });
     });
-});
+}
 
+MongoClient.connect(uri, function (err, db) {
+    if (err) throw err;
+    var votes = db.collection("votes");
+    votes.drop({}, function () {
+        loadEvents();
+    });
+});
