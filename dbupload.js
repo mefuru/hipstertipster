@@ -17,7 +17,7 @@ var events = [
     {title: 'Burgers and Bacon fries at Olso in Hackney', img: '10.jpg', desc: ''},
     {title: 'Order an "Owl" and watch jazz at Night Jar', img: '11.jpg', desc: 'Cool speakeasy bar in shoreditch serving specialty cocktails and jass music'},
     {title: 'Yoga meets supper club', img: '12.jpg', desc: 'Do yoga and have a delicious vegan meal prepared afterward'},
-    {title: 'Take a yoga class at Lululemon\'s new store', img: '13.png', desc: 'Free yoga every weekend'},
+    {title: 'Take a yoga class at Lululemon\'s new store', img: '13.jpg', desc: 'Free yoga every weekend'},
     {title: 'Watch the Big Lebowski at Rooftop Film Club', img: '14.jpg', desc: 'Rooftop film club featuring new releases and old classics enjoyed with the London skyline'},
     {title: 'Kimchinary, Korean Pop up in Stoke Newington', img: '15.jpg', desc: ''},
     {title: 'Cool drinking den behind the fridge door', img: '16.jpg', desc: 'Breakfast Club might be old news, but did you know about the bar behind the SMEG fridge door?'},
@@ -31,7 +31,7 @@ var events = [
     {title: 'Midnight Apothecary at Brunel Museum', img: '24.jpg', desc: 'Cocktail bar on a rooftop around a fire pit. Watch the sunset over the river, listen to birds, insects and local musicians while toasting marshmellows.'},
     {title: 'Dance & eat at Disappearing Dining Club', img: '25.jpg', desc: 'Monthly dinner party which takes place in a variety of locations - galleries, studios, carparks, warehouses, abandoned night clubs - combining great food and drink with a cracking night out'},
     {title: 'Sunday Film Club at Charlotte Street Hotel', img: '26.jpg', desc: 'Dinner and a movie in a beautiful cinema with leather arm chairs with popcorn and cocktails at hand'},
-    {title: 'Electric Cinema', img: '27.png', desc: 'One of the UK\'s oldest cinemas featuring homemade doughnuts, leather sofas and cashmere blankets'},
+    {title: 'Electric Cinema', img: '27.jpg', desc: 'One of the UK\'s oldest cinemas featuring homemade doughnuts, leather sofas and cashmere blankets'},
     {title: 'Test your ping pong talent at Ping', img: '28.jpg', desc: 'Ping pong bar in West London with beer, cocktails, pizza and the occassional Ryan Gosling film'},
     {title: 'Kernal Brewpub', img: '29.jpg', desc: 'Sip on the hippest brews in south London underneath a railway arch'},
     {title: 'Salt beef sandwhichs and cocktails at Mishkin\'s', img: '30.jpg', desc: 'Cocktails at this homage to a Jewish Deli'}
