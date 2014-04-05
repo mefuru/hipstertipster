@@ -11,8 +11,12 @@ exports.about = function(req, res){
     res.render("about");
 };
 
-exports.feed = function(req, res){
-    res.render("feed");
+exports.quiz = function(req, res){
+    res.render("quiz");
+};
+
+exports.item = function(req, res){
+    res.render("item");
 };
 
 exports.contact = function(req, res){

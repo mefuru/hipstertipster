@@ -52,7 +52,7 @@ function showQuestion(index) {
 function showEnd(allowedIn) {
 	if(allowedIn) {
 		console.log('redirect');
-		window.location.replace("/feed");
+		window.location.replace("/");
 		// var hipster_answer = HIPSTER_ANSWERS[Math.floor(Math.random()*HIPSTER_ANSWERS.length)];
 		// $('.end-voting h3').html(hipster_answer);
 	} else {
