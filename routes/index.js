@@ -15,10 +15,10 @@ exports.index = function(req, res){
         cursor.toArray(function(err, docs) {
             if(err) throw err;
             res.render("index", {events: docs});
+            db.close();
         });
-        db.close()
     });
-});
+};
 
 exports.quiz = function(req, res){
     res.render("quiz");
