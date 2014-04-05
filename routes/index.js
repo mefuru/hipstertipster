@@ -11,27 +11,14 @@ exports.about = function(req, res){
     res.render("about");
 };
 
-exports.livescores = function(req, res){
-    res.render("livescores");
+exports.feed = function(req, res){
+    res.render("feed");
 };
 
 exports.contact = function(req, res){
     res.render("contact");
 };
 
-exports.bookies = function(req, res){
-    res.render("bookies");
+exports.addevent = function(req, res){
+    res.render("addevent");
 };
-
-exports.calculator = function(req, res){
-    res.render("calculator");
-};
-
-exports.renderBookie = function(req, res){
-    res.send(req.query.name);
-};
-
-exports.picks = function(req, res){
-    res.render("picks");
-};
-
