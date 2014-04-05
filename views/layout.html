@@ -1,0 +1,52 @@
+!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/active.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">SportyBookies.com</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="bookies"><a href="/bookies">BOOKIES</a></li>
+            <li class="livescores"><a href="/livescores">LIVESCORES</a></li>
+            <li class="calculator"><a href="/calculator">OODS CALCULATOR</a></li>
+            <li class="picks"><a href="/picks">EDITOR'S PICS</a></li>
+            <li class="about"><a href="/about">ABOUT</a></li>
+            <li class="contact"><a href="/contact">CONTACT US</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+      <div class="row">
+        <div class="col-xs-3 col-md-2">
+        </div>
+        <div class="col-xs-3 col-md-2">
+          <span class="label label-warning">PREMIER FREE BETS AND ONLINE BETTING PROMOTION SITE</span>
+        </div>
+        <div class="col-xs-3 col-md-2">
+        </div>      
+      </div>
+    </div>
+    <div class=" headerwrap container">
+      <div class="row">
+        <div class="col-xs-3 col-md-2"></div>
+        {% block content %}{% endblock %}
+        <div class="col-xs-3 col-md-2"></div>
+      </div>
+    </div>
+  </body>
+</html>

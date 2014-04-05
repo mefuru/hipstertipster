@@ -1,0 +1,434 @@
+{% extends '../views/layout.html' %}
+{% block content %}
+<div class="col-xs-12 col-md-8">
+</br></br></br>
+<div class="internal_box">
+  <form name="betting_calculator">
+    <table border="0" bordercolor="#FFFFFF" cellpadding="0" cellspacing="0" align="center" height="50%" width="100%">
+      <tbody>
+        <tr height="30"> 
+          <td width="50%" align="center" valign="middle" bordercolor="#000099" bgcolor="#303030" class="midsection"><font color="#FFF"><b>STAKE :</b></font> 
+            <input class="bets" name="stake" size="10" maxlength="10" type="text">
+	  </td>
+          <td width="50%" align="center" valign="middle" bgcolor="#303030" class="midsection"><font color="#FFF"><b>EACH WAY :</b></font>
+            <input "="" name="eachway" value="eachway" type="checkbox">
+				                                      </td>
+        </tr>
+	<tr> 
+          <td colspan="2" class="midsection_elements"> 
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="color:#fff">
+	      <tbody>
+		<tr>
+		  <td align="right" bgcolor="#303030">&nbsp;</td>
+		  <td align="left" bgcolor="#303030">&nbsp;</td>
+		  <td align="right" bgcolor="#303030">&nbsp;</td>
+		  <td align="left" bgcolor="#303030">&nbsp;</td>
+		  <td align="right" bgcolor="#303030">&nbsp;</td>
+		  <td align="left" bgcolor="#303030">&nbsp;</td>
+		  <td align="right" bgcolor="#303030">&nbsp;</td>
+		  <td align="left" bgcolor="#303030">&nbsp;</td>
+		</tr>
+		<tr>
+		  <td align="right" bgcolor="#303030"> <span class="style3"> 
+                      <input name="bet_type" onclick="fullName(this.form)" value="Single" type="radio">
+                  </span></td>
+		  <td align="left" bgcolor="#303030"><span class="style3"><b>Single</b></span></td>
+        	  <td width="10" align="right" bgcolor="#303030"> <span class="style3"> 
+                      <input name="bet_type" onclick="fullName(this.form)" value="Double" type="radio">
+                  </span></td>
+                  <td width="10" align="left" bgcolor="#303030"><span class="style3"><b>Double</b></span></td>
+                  <td width="10" align="right" bgcolor="#303030"> <span class="style3"> 
+                      <input name="bet_type" onclick="fullName(this.form)" value="Treble" type="radio">
+                  </span></td>
+	          <td width="10" align="left" bgcolor="#303030"><span class="style3"><b>Treble</b></span></td>
+                  <td width="10" align="right" bgcolor="#303030"> <span class="style3">
+                      <input name="bet_type" onclick="fullName(this.form)" value="Accumulator" type="radio">
+                  </span></td>
+                  <td width="142" align="left" bgcolor="#303030"><span class="style3"><b>Accumulator 
+                        (4+)</b></span></td>
+                </tr>
+                <tr> 
+		  <td width="10" align="right" bgcolor="#303030"> <span class="style3"> 
+                      <input name="bet_type" onclick="fullName(this.form)" value="Trixie" ;="" type="radio">
+                  </span></td>
+                  <td width="10" align="left" bgcolor="#303030"><span class="style3"><b>Trixie</b></span></td>
+                  <td width="10" align="right" bgcolor="#303030"> <span class="style3"> 
+                      <input name="bet_type" onclick="fullName(this.form)" value="Patent" ;="" type="radio">
+                  </span></td>
+	          <td width="10" align="left" bgcolor="#303030"><span class="style3"><b>Patent</b></span></td>
+                  <td width="10" align="right" bgcolor="#303030"> <span class="style3">
+                      <input name="bet_type" onclick="fullName(this.form)" value="Yankee" ;="" type="radio">
+                  </span></td>
+                  <td width="10" align="left" bgcolor="#303030"><span class="style3"><b>Yankee</b></span></td>
+                  <td width="10" align="right" bgcolor="#303030"> <span class="style3">
+                      <input name="bet_type" onclick="fullName(this.form)" value="Lucky15" type="radio">
+                  </span></td>
+                  <td width="140" align="left" bgcolor="#303030"><span class="style3"><b>Lucky 
+                        15</b></span></td>
+                </tr>
+                <tr> 
+		  <td width="10" align="right" bgcolor="#303030"> <span class="style3"> 
+                      <input name="bet_type" onclick="fullName(this.form)" value="Canadian" type="radio">
+                  </span></td>
+                  <td width="10" align="left" bgcolor="#303030"><span class="style3"><b>Canadian</b></span></td>
+                  <td width="10" align="right" bgcolor="#303030"> <span class="style3">
+                      <input name="bet_type" onclick="fullName(this.form)" value="Lucky31" ;="" type="radio">
+                  </span></td>
+                  <td width="10" align="left" bgcolor="#303030"><span class="style3"><b>Lucky 
+                        31</b></span></td>
+                  <td width="10" align="right" bgcolor="#303030"> <span class="style3">
+                      <input name="bet_type" onclick="fullName(this.form)" value="Heinz" ;="" type="radio">
+                  </span></td>
+                  <td width="10" align="left" bgcolor="#303030"><span class="style3"><b>Heinz</b></span></td>
+	          <td width="10" align="right" bgcolor="#303030"> <span class="style3"> 
+                      <input name="bet_type" onclick="fullName(this.form)" value="Lucky63" type="radio">
+                  </span></td>
+		  <td width="140" align="left" bgcolor="#303030"><span class="style3"><b>Lucky 
+                        63</b></span></td>
+	        </tr>
+                <tr>
+                  <td align="right" bgcolor="#303030">&nbsp;</td>
+                  <td align="left" bgcolor="#303030">&nbsp;</td>
+                  <td align="right" bgcolor="#303030">&nbsp;</td>
+                  <td align="left" bgcolor="#303030">&nbsp;</td>
+                  <td align="right" bgcolor="#303030">&nbsp;</td>
+                  <td align="left" bgcolor="#303030">&nbsp;</td>
+                  <td align="right" bgcolor="#303030">&nbsp;</td>
+                  <td align="left" bgcolor="#303030">&nbsp;</td>
+                </tr>
+	      </tbody>
+            </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td colspan="2">
+	    <table border="0" bordercolor="#CCCCCC" cellpadding="0" cellspacing="0" width="100%" style="background:#E6E6E6">
+	      <tbody>
+		<tr>
+		  <td height="21" align="center" class="skybluecontent">&nbsp;</td>
+		  <td colspan="3" align="center" valign="middle" class="skybluecontent">&nbsp;</td>
+		  <td align="center" valign="middle" class="skybluecontent">&nbsp;</td>
+		  <td colspan="3" class="skybluecontent" align="center">&nbsp;</td>
+		  <td class="skybluecontent" align="center">&nbsp;</td>
+		</tr>
+		<tr>
+		  <td height="21" align="center" class="skybluecontent">Bets </td>
+        	  <td colspan="3" align="center" valign="middle" class="skybluecontent"><input name="bet_format" value="fraction" checked="" type="radio">Fraction</td>
+		  <td align="center" valign="middle" class="skybluecontent"><input name="bet_format" value="decimal" type="radio">Decimal</td>
+		  <td colspan="3" class="skybluecontent" align="center">Each 
+                    Way</td>
+                  <td class="skybluecontent" align="center">1st</td>
+		</tr>
+		<tr>
+		  <td class="skybluecontent" align="center" width="10%">
+                    1</td>
+                  <td class="skybluecontent" align="center" width="12%">  
+                    <input class="bets" name="bet1_fraction1" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center" width="12%">  
+                    <input class="bets" name="bet1_fraction2" size="5" maxlength="5" type="text">
+                  </td>
+		  <td class="skybluecontent" align="center" width="30%">  
+                    <input class="bets" name="decimal_bet1" size="5" maxlength="5" type="text">
+                  </td>
+		  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew1_fraction1" size="5" maxlength="5" value="1" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew1_fraction2" size="5" maxlength="5" value="4" type="text">
+                  </td>
+	          <td class="skybluecontent" align="center">  
+                    <input name="firstplace_1" value="firstplace_1" type="checkbox">
+                  </td>
+		</tr>
+		<tr height="25"> 
+                  <td class="skybluecontent" align="center">
+                    2</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet2_fraction1" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet2_fraction2" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="decimal_bet2" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew2_fraction1" size="5" maxlength="5" value="1" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew2_fraction2" size="5" maxlength="5" value="4" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input name="firstplace_2" value="firstplace_2" type="checkbox">
+                  </td>
+                </tr>
+		
+                <tr height="25"> 
+                  <td class="skybluecontent" align="center"> 
+                    3</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet3_fraction1" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet3_fraction2" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="decimal_bet3" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew3_fraction1" size="5" maxlength="5" value="1" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew3_fraction2" size="5" maxlength="5" value="4" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input name="firstplace_3" value="firstplace_3" type="checkbox">
+                  </td>
+                </tr>
+		
+                <tr height="25"> 
+                  <td class="skybluecontent" align="center">
+                    4</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet4_fraction1" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet4_fraction2" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="decimal_bet4" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew4_fraction1" size="5" maxlength="5" value="1" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew4_fraction2" size="5" maxlength="5" value="4" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input name="firstplace_4" value="firstplace_4" type="checkbox">
+                  </td>
+                </tr>
+		
+                <tr height="25"> 
+                  <td class="skybluecontent" align="center">
+                    5</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet5_fraction1" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet5_fraction2" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="decimal_bet5" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew5_fraction1" size="5" maxlength="5" value="1" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew5_fraction2" size="5" maxlength="5" value="4" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input name="firstplace_5" value="firstplace_5" type="checkbox">
+                  </td>
+                </tr>
+		
+                <tr height="25"> 
+                  <td class="skybluecontent" align="center">
+                    6</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet6_fraction1" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet6_fraction2" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="decimal_bet6" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew6_fraction1" size="5" maxlength="5" value="1" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew6_fraction2" size="5" maxlength="5" value="4" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input name="firstplace_6" value="firstplace_6" type="checkbox">
+                  </td>
+                </tr>
+		
+                <tr height="25"> 
+                  <td class="skybluecontent" align="center">
+                    7</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet7_fraction1" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet7_fraction2" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="decimal_bet7" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew7_fraction1" size="5" maxlength="5" value="1" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew7_fraction2" size="5" maxlength="5" value="4" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input name="firstplace_7" value="firstplace_7" type="checkbox">
+                  </td>
+                </tr>
+		
+                <tr height="25"> 
+                  <td class="skybluecontent" align="center">
+                    8</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet8_fraction1" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet8_fraction2" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="decimal_bet8" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew8_fraction1" size="5" maxlength="5" value="1" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew8_fraction2" size="5" maxlength="5" value="4" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input name="firstplace_8" value="firstplace_8" type="checkbox">
+                  </td>
+                </tr>
+		
+                <tr height="25"> 
+                  <td class="skybluecontent" align="center">
+                    9</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet9_fraction1" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet9_fraction2" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="decimal_bet9" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew9_fraction1" size="5" maxlength="5" value="1" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew9_fraction2" size="5" maxlength="5" value="4" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input name="firstplace_9" value="firstplace_9" type="checkbox">
+                  </td>
+                </tr>
+		
+                <tr height="25"> 
+                  <td class="skybluecontent" align="center">
+                    10</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet10_fraction1" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="bet10_fraction2" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="decimal_bet10" size="5" maxlength="5" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew10_fraction1" size="5" maxlength="5" value="1" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center" width="3%">/</td>
+                  <td class="skybluecontent" align="center">  
+                    <input class="bets" name="ew10_fraction2" size="5" maxlength="5" value="4" type="text">
+                  </td>
+                  <td class="skybluecontent" align="center">  
+                    <input name="firstplace_10" value="firstplace_10" type="checkbox">
+                  </td>
+                </tr>
+		
+		<tr>
+		  <td colspan="9">
+		    
+		    <table class="skybluebar" border="0" cellpadding="0" cellspacing="0" width="100%">
+		      <tbody><tr>
+			  
+	                  <td colspan="9" class="skybluecontent"> 
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tbody><tr> 
+				  <td width="34%">&nbsp; </td>
+                                  
+                                  
+                                  <td width="34%">&nbsp; 
+                                    <input name="decimals" value="check" onclick="checkDecimals(document.betting_calculator.stake, document.betting_calculator.stake.value)" type="hidden">
+                                  </td>
+				</tr>	  
+				
+			    </tbody></table>
+			    
+			  </td>
+			  
+			  
+			</tr>
+			<tr> 
+                          <td colspan="9" class="skybluebar"> 
+                            <table class="skybluebar" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tbody><tr> 
+				  <td class="style3" align="right" width="16%">
+                                    <input name="calc_bet" style="BORDER-BOTTOM: 1px solid; BORDER-LEFT: 1px solid; BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT: 11px verdana, sans-serif; TEXT-ALIGN: center; color:#ffffff; background-color: #303030; height: 20px;" onclick="if(checkDecimals(document.betting_calculator.stake, document.betting_calculator.stake.value)==1) elandBet();" value="Calculate" #invalid_attr_id="#FFCC66" type="button">
+                                  </td>
+				  <td align="right"><b>&nbsp;Profit:</b></td> 	
+				  <td align="center">&nbsp; <input class="totalProfit" name="profit" maxlength="12" readonly="true" style="border:0px solid #000000;width:48pt" size="12" type="text">
+                                  </td>
+				  <td align="right"><b>&nbsp;Returns:</b></td>
+				  <td align="center">
+                                    &nbsp; 
+                                    <input class="totals" name="winnings" size="12" maxlength="12" readonly="true" style="border:0px solid #000000;width:48pt" type="text">
+                                  </td>
+                                </tr>
+				
+				<tr>
+				  <td>&nbsp; </td>
+				</tr>
+                            </tbody></table>
+                          </td>
+                        </tr>
+			<tr>
+			  <td align="center">
+                            <input value="Reset" style="BORDER-BOTTOM: 1px solid; BORDER-LEFT: 1px solid; BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT: 11px verdana, sans-serif; color:#ffffff; TEXT-ALIGN: center; background-color: #303030; height: 20px;" name="reset" type="reset">
+                          </td>
+			</tr>
+			
+			<tr>
+			  <td colspan="9" class="skybluebar">&nbsp; </td>
+			</tr>
+		    </tbody></table>
+		  </td>
+		</tr>
+	    </tbody></table>
+    </td></tr></tbody></table>
+  </form>               
+</div>
+</div>
+{% endblock %}
