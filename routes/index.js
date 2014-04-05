@@ -56,7 +56,7 @@ exports.vote = function(req, res){
             if(err) throw err;
             console.log(doc);
             db.close();
-            res.redirect("/");
+            res.redirect("/#" + req.params.eventId);
         });
     });
 };
