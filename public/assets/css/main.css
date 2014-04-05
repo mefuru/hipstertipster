@@ -1,4 +1,15 @@
 
+
+@media (min-width: 500px) {
+  .voting {
+    width: 500px;
+  }
+
+  .feed #img_container {
+    width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .voting {
     width: 800px;
@@ -21,7 +32,6 @@
   .feed #img_container {
     width: 33%;
   }
-
 }
 
 .voting .img-thumbnail {
