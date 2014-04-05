@@ -80,6 +80,7 @@
 
 
 		<div id="img_container">
+
                   
 		  <a name="{{ event._id.toHexString() }}"></a>
 		  {% if event.votes == 6 %}
@@ -103,6 +104,20 @@
                   </div>
                   
 		  {% endif %}
+
+
+			
+			<a name="{{ event._id.toHexString() }}"></a>
+			{% if event.votes == 6 %}
+				<h3>{{ i+1 }} Hiploaded!</h3>
+			    <a href=""><img src="/images/{{ event.imgFileName }}" class="img-thumbnail grayscale"></a>
+            	<img src="images/logo2_transparent.png" class="hiploaded"/>
+			{% else %}
+				<h3>{{ i+1 }} {{ event.title }}</h3>
+            <a class="vote" href="/vote/{{ event._id.toHexString() }}"><img src="/images/up.png" height="50"/></a>
+            <a href="/item/{{ event._id.toHexString() }}"><img src="/images/{{ event.imgFileName }}" class="img-thumbnail"></a>
+
+			{% endif %}
 
 
 
