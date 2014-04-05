@@ -1,8 +1,7 @@
 // Dependencies
 var MongoClient = require('mongodb').MongoClient;
-var keys = require("../keys.js");
 var ObjectID = require('mongodb').ObjectID;
-var uri = process.env.MONGOLAB_URI || keys.MONGOURI;
+var uri = process.env.MONGOLAB_URI || require("../keys.js").MONGOURI;
 
 exports.about = function(req, res){
     res.render("about");
