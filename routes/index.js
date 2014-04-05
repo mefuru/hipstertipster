@@ -47,8 +47,8 @@ exports.vote = function(req, res){
         votes.update(query, operator, options, function(err, doc){
             if(err) throw err;
             console.log(doc);
+            db.close();
+            res.redirect("index");
         });
-        db.close();
     });
-    res.render("feed");
 };
