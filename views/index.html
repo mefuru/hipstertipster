@@ -81,8 +81,9 @@
 		<div id="img_container">
 			<a name="{{ event._id.toHexString() }}"></a>
 			<h3>{{ event.title }}</h3>
-		    <a href="/vote/{{ event._id.toHexString() }}" type="button" class="button btn btn-success">+</a>
-		    <a href="/item/{{ event._id.toHexString() }}"><img src="/images/{{ event.imgFileName }}" class="img-thumbnail"></a>
+		    <a href="/item/{{ event._id.toHexString() }}"><img src="/images/{{ event.imgFileName }}" class="img-thumbnail grayscale"></a>
+                    <a href="/vote/{{ event._id.toHexString() }}" class="hiploaded"><img src="images/logo2.png"/></a>
+
 		</div>
 			
 
