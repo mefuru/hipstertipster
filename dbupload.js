@@ -5,8 +5,8 @@ var keys = require("./keys.js");
 var uri = process.env.MONGOLAB_URI || keys.MONGOURI;
 
 var events = [
-    {title: 'Meet the London coffee scene @ London Coffee Festival', img: '1.jpg', desc: 'Meet the London artisan coffee scene,and the learn  the science behind your daily caffeine fix.', votes: 8},
-    {title: 'Secret Cinema presents the The Great Budapest Hotel ', img: '2.jpg', desc: 'Secret Cinema  invites you to take part in the latest Wes Anderson release', votes: 8},
+    {title: 'Meet the London coffee scene @ London Coffee Festival', img: '1.jpg', desc: 'Meet the London artisan coffee scene,and the learn  the science behind your daily caffeine fix.', votes: 3},
+    {title: 'Secret Cinema presents the The Great Budapest Hotel', img: '2.jpg', desc: 'Secret Cinema  invites you to take part in the latest Wes Anderson release', votes: 3},
     {title: 'Learn how to bake at E5 Bakehouse', img: '3.jpg', desc: 'Bake your own bread and pizzas like a pro with a day full immersion classes'},
     {title: 'See the Drowned Man', img: '4.jpg', desc: 'Immersive theater experience'},
     {title: 'Get champagne and hotdogs at Bubble Dog', img: '5.jpg', desc: 'A champagne bar that does not serve caviar'},
@@ -28,7 +28,7 @@ var events = [
     {title: 'Lost Chance Saloon', img: '21.jpg', desc: 'Gambling, glamour, dancing, debauchery, jazz and gin'},
     {title: 'DoggySunday at Gaucho in Hampstead', img: '22.jpg', desc: 'Doggy party with raffles, activities as well as steak and cocktails. Doggy easter attire optional.'},
     {title: 'The Diplomatic Curse from A Door in the Wall', img: '23.png', desc: 'Immersive real-life game throughout the streets of London solving a murder mystery'},
-    {title: 'Grab a cocktail at Midnight Apothecary at Brunel Museum Roof Garden', img: '24.jpg', desc: 'Cocktail bar on a rooftop around a fire pit. Watch the sunset over the river, listen to birds, insects and local musicians while toasting marshmellows.'},
+    {title: 'Cocktail at Midnight Apothecary at Brunel Museum', img: '24.jpg', desc: 'Cocktail bar on a rooftop around a fire pit. Watch the sunset over the river, listen to birds, insects and local musicians while toasting marshmellows.'},
     {title: 'Dance & eat at Disappearing Dining Club', img: '25.jpg', desc: 'Monthly dinner party which takes place in a variety of locations - galleries, studios, carparks, warehouses, abandoned night clubs - combining great food and drink with a cracking night out'},
     {title: 'Sunday Film Club at Charlotte Street Hotel', img: '26.jpg', desc: 'Dinner and a movie in a beautiful cinema with leather arm chairs with popcorn and cocktails at hand'},
     {title: 'Electric Cinema', img: '27.png', desc: 'One of the UK\'s oldest cinemas featuring homemade doughnuts, leather sofas and cashmere blankets'},
