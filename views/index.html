@@ -81,12 +81,12 @@
 
 		<div id="img_container">
 			
+			<a name="{{ event._id.toHexString() }}"></a>
 			{% if event.votes == 6 %}
 				<h3>{{ i+1 }} Hiploaded!</h3>
 			    <a href=""><img src="/images/{{ event.imgFileName }}" class="img-thumbnail grayscale"></a>
             	<img src="images/logo2_transparent.png" class="hiploaded"/>
 			{% else %}
-				<a name="{{ event._id.toHexString() }}"></a>
 				<h3>{{ i+1 }} {{ event.title }}</h3>
 			    <a href="/vote/{{ event._id.toHexString() }}" type="button" class="button btn btn-success">+</a>
 			    <a href="/item/{{ event._id.toHexString() }}"><img src="/images/{{ event.imgFileName }}" class="img-thumbnail"></a>
