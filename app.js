@@ -31,18 +31,15 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+
 app.get('/', routes.index);
 app.get('/about', routes.about);
 app.get('/quiz', routes.quiz);
 app.get('/item', routes.item);
 app.get('/contact', routes.contact);
 app.get('/addevent', routes.addevent);
-app.get('/vote/:event', routes.vote);
+app.get('/vote/:eventId', routes.vote);
 
-app.param('event', function(req, res, next, id){
-    // find event
-    req.eventId = id;
-});
 
 
 http.createServer(app).listen(app.get('port'), function(){

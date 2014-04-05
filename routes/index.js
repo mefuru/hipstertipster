@@ -1,6 +1,7 @@
 // Dependencies
 var MongoClient = require('mongodb').MongoClient;
 var keys = require("../keys.js");
+var ObjectID = require('mongodb').ObjectID;
 var uri = process.env.MONGOLAB_URI || keys.MONGOURI;
 
 exports.about = function(req, res){
@@ -38,17 +39,22 @@ exports.addevent = function(req, res){
 
 exports.vote = function(req, res){
     // Update
+    console.log('a');
     MongoClient.connect(uri, function(err, db) {
         if(err) throw err;
+    	console.log('b');
         var votes = db.collection("votes");
-        var query = {_id: new ObjectID(req.eventId)};
+        var query = {_id: new ObjectID(req.params.eventId)};
         var operator = {$inc : {votes : 1 } };
         var options = {upsert: true, multi: true};
+    	console.log('c');
         votes.update(query, operator, options, function(err, doc){
+
+    	console.log('d');
             if(err) throw err;
             console.log(doc);
             db.close();
-            res.redirect("index");
+            res.redirect("/");
         });
     });
 };
