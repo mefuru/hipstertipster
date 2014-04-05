@@ -10,20 +10,7 @@
   }
 }
 
-@media (min-width: 768px) {
-  .voting {
-    width: 800px;
-  }
 
-  .feed #img_container {
-    width: 49%;
-  }
-}
-@media (min-width: 992px) {
-  .voting {
-    width: 800px;
-  }
-}
 @media (min-width: 1200px) {
   .voting {
     width: 800px;
