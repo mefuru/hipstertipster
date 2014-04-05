@@ -12,7 +12,7 @@ exports.index = function(req, res){
     MongoClient.connect(uri, function(err, db) {
         if(err) throw err;
         var votes = db.collection("votes");
-        var cursor = votes.find({votes: {$lt: 10 }});
+        var cursor = votes.find({votes: {$lt: 6 }}).sort({votes: -1});
         cursor.toArray(function(err, docs) {
             if(err) throw err;
             res.render("index", {events: docs});
@@ -34,13 +34,6 @@ exports.item = function(req, res){
             console.log(doc);
            res.render("item", {event: doc});
         });
-        // res.render("item", {event: cursor})
-        
-        // cursor.toArray(function(err, doc) {
-        //     if(err) throw err;
-        //     res.render("item", {event: doc});
-        //     db.close();
-        // });
     });
 };
 
