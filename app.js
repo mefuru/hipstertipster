@@ -22,7 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/public'));
 
 
 // development only
@@ -33,6 +34,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/about', routes.about);
 app.get('/feed', routes.feed);
+// app.get('/item', routes.item);
 app.get('/contact', routes.contact);
 app.get('/addevent', routes.addevent);
 

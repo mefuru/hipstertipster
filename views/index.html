@@ -1,6 +1,32 @@
 {% extends '../views/layout.html' %}
 
 {% block content %}
+	<br /><br />
+	<div class="container voting-question">	
+		<h1>How Hipster are you?</h1>
+		<h2>Pick <span id="vote_count">5</span> something you below which you like</h2>
+	</div>
 
+	<div class="container voting">
+		<div class="questions" data-question="0">
+			<a href="#" data-image-rating="1"><img src="assets/img/voting/1.jpg" class="img-thumbnail"></a>
+			<a href="#" data-image-rating="0.2"><img src="assets/img/voting/2.jpg" class="img-thumbnail"></a>	
+			<a href="#" data-image-rating="0.4"><img src="assets/img/voting/6.jpg" class="img-thumbnail"></a>	
+			<a href="#" data-image-rating="0.4"><img src="assets/img/voting/4.jpg" class="img-thumbnail"></a>	
+		</div>
+		<div class="questions" data-question="1">
+			<a href="#" data-image-rating="0.9"><img src="assets/img/voting/4.jpg" class="img-thumbnail"></a>
+			<a href="#" data-image-rating="0.1"><img src="assets/img/voting/5.jpg" class="img-thumbnail"></a>
+			<a href="#" data-image-rating="0.4"><img src="assets/img/voting/6.jpg" class="img-thumbnail"></a>	
+		</div>
+		<div class="questions" data-question="2">
+			<a href="#" data-image-rating="0.4"><img src="assets/img/voting/6.jpg" class="img-thumbnail"></a>	
+			<a href="#" data-image-rating="0.4"><img src="assets/img/voting/6.jpg" class="img-thumbnail"></a>	
+			<a href="#" data-image-rating="0.4"><img src="assets/img/voting/6.jpg" class="img-thumbnail"></a>	
+		</div>
+	</div><br /><br />
+
+	<div class="container end-voting">
+	</div>
 
 {% endblock %}

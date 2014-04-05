@@ -1,0 +1,43 @@
+
+@media (min-width: 768px) {
+  .voting {
+    width: 800px;
+  }
+}
+@media (min-width: 992px) {
+  .voting {
+    width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .voting {
+    width: 800px;
+  }
+}
+
+.voting .img-thumbnail {
+  width: 49%;
+}
+/*
+.feed .img-thumbnail {
+  width: 49%;
+}
+*/
+.feed a{
+    position:relative;
+
+}
+.feed a p{
+    top:0;
+    left:0;
+    position: absolute;
+}
+
+
+.show {
+  display:block;
+}
+
+.hide {
+  display: none;
+}
