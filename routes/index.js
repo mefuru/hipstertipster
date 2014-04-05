@@ -11,7 +11,7 @@ exports.index = function(req, res){
     MongoClient.connect(uri, function(err, db) {
         if(err) throw err;
         var votes = db.collection("votes");
-        var cursor = votes.find({votes: {$lt: 6 }}).sort({votes: -1});
+        var cursor = votes.find().sort({votes: -1});
         cursor.toArray(function(err, docs) {
             if(err) throw err;
             res.render("index", {events: docs});
