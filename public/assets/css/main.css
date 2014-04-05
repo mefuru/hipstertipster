@@ -61,3 +61,11 @@ body {
 .hide {
   display: none;
 }
+
+.navbar-toggle{
+  background-color: #000;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
