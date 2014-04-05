@@ -37,12 +37,6 @@ app.get('/feed', routes.feed);
 // app.get('/item', routes.item);
 app.get('/contact', routes.contact);
 app.get('/addevent', routes.addevent);
-app.post('/vote/:event', routes.vote);
-
-app.param('event', function(req, res, next, id){
-    // find event
-    req.event = {};
-});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

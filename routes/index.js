@@ -22,10 +22,3 @@ exports.contact = function(req, res){
 exports.addevent = function(req, res){
     res.render("addevent");
 };
-
-exports.vote = function (req, res) {
-    var event = req.event;
-    event.votes++;
-
-    res.render('index');
-};
