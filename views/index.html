@@ -88,11 +88,18 @@
 	</div>
 
 	<div class="container feed">
+
+		{% for event in events %}
+
 		<div id="img_container">
-			<h3>Title</h3>
-		    <a href="/votes/1" type="button" class="button btn btn-success">+</a>
-		    <a href="/item"><img src="assets/img/voting/1.jpg" class="img-thumbnail"></a>
+			<h3>{{ event.title }}</h3>
+		    <a href="/vote/{{ event._id.toHexString() }}" type="button" class="button btn btn-success">+</a>
+		    <a href="/item"><img src="{{ event.imgFileName }}" class="img-thumbnail"></a>
 		</div>
+			
+
+		{% endfor %}
+
 
 		<div id="img_container">
 			<h3>Title</h3>
