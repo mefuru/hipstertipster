@@ -73,69 +73,31 @@
 	    </div>
 	  </div>
 	</div>
-
-		<div class="container feed">
-
-        {% for i, event in events %}
-
-
-		<div id="img_container">
-
-                  
-		  <a name="{{ event._id.toHexString() }}"></a>
-		  {% if event.votes == 6 %}
-		  <h3>{{ i+1 }} Hiploaded!</h3>
-		  <a href=""><img src="/images/{{ event.imgFileName }}" class="img-thumbnail grayscale"></a>
-            	  <img src="images/logo2_transparent.png" class="hiploaded"/>
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-danger" style="width: {{event.votes/6 * 100}}%">
-                      <span class="sr-only">20% Complete (success)</span>
-                    </div>
-                  </div>
-                  
-		  {% else %}
-		  <h3>{{ i+1 }} {{ event.title }}</h3>
-		  <a href="/vote/{{ event._id.toHexString() }}" type="button" class="button btn btn-success">+</a>
-		  <a href="/item/{{ event._id.toHexString() }}"><img src="/images/{{ event.imgFileName }}" class="img-thumbnail"></a>
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-danger" style="width: {{event.votes/6 * 100}}%">
-                      <span class="sr-only">20% Complete (success)</span>
-                    </div>
-                  </div>
-                  
-		  {% endif %}
-
-
-			
-			<a name="{{ event._id.toHexString() }}"></a>
-			{% if event.votes == 6 %}
-				<h3>{{ i+1 }} Hiploaded!</h3>
-			    <a href=""><img src="/images/{{ event.imgFileName }}" class="img-thumbnail grayscale"></a>
-            	<img src="images/logo2_transparent.png" class="hiploaded"/>
-			{% else %}
-				<h3>{{ i+1 }} {{ event.title }}</h3>
+	<div class="container feed">
+          {% for i, event in events %}
+	  <div id="img_container">
+	    <a name="{{ event._id.toHexString() }}"></a>
+	    {% if event.votes == 6 %}
+	    <h3>{{ i+1 }} Hiploaded!</h3>
+	    <a href=""><img src="/images/{{ event.imgFileName }}" class="img-thumbnail grayscale"></a>
+            <img src="images/logo2_transparent.png" class="hiploaded"/>
+            <div class="progress">
+              <div class="progress-bar progress-bar-danger" style="width: {{event.votes/6 * 100}}%">
+                <span class="sr-only">20% Complete (success)</span>
+              </div>
+            </div>
+            {% else %}
+	    <h3>{{ i+1 }} {{ event.title }}</h3>
             <a class="vote" href="/vote/{{ event._id.toHexString() }}"><img src="/images/up.png" height="50"/></a>
             <a href="/item/{{ event._id.toHexString() }}"><img src="/images/{{ event.imgFileName }}" class="img-thumbnail"></a>
-
-			{% endif %}
-
-
-
-                        
-		</div>
-
-
-		{% endfor %}
-
+            <div class="progress">
+              <div class="progress-bar progress-bar-danger" style="width: {{event.votes/6 * 100}}%">
+                <span class="sr-only">20% Complete (success)</span>
+              </div>
+            </div>
+            {% endif %}
+	  </div>
+          {% endfor %}
 	</div>
-
 	<br /><br />
-                            
-
-			
-
-		
-	
-
-
 {% endblock %}
