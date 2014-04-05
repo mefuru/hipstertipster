@@ -26,7 +26,22 @@ exports.quiz = function(req, res){
 };
 
 exports.item = function(req, res){
-    res.render("item");
+    MongoClient.connect(uri, function(err, db) {
+        if(err) throw err;
+        var votes = db.collection("votes");
+        var query = {_id: new ObjectID(req.params.eventId)};
+        var cursor = votes.findOne(query, function(err, doc) {
+            console.log(doc);
+           res.render("item", {event: doc});
+        });
+        // res.render("item", {event: cursor})
+        
+        // cursor.toArray(function(err, doc) {
+        //     if(err) throw err;
+        //     res.render("item", {event: doc});
+        //     db.close();
+        // });
+    });
 };
 
 exports.contact = function(req, res){
@@ -39,18 +54,13 @@ exports.addevent = function(req, res){
 
 exports.vote = function(req, res){
     // Update
-    console.log('a');
     MongoClient.connect(uri, function(err, db) {
         if(err) throw err;
-    	console.log('b');
         var votes = db.collection("votes");
         var query = {_id: new ObjectID(req.params.eventId)};
         var operator = {$inc : {votes : 1 } };
         var options = {upsert: true, multi: true};
-    	console.log('c');
         votes.update(query, operator, options, function(err, doc){
-
-    	console.log('d');
             if(err) throw err;
             console.log(doc);
             db.close();

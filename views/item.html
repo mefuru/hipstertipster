@@ -1,11 +1,15 @@
 {% extends '../views/layout.html' %}
 
 {% block content %}
+
+
+			
+
 	<br /><br /><br /><br /><br /><br />
 	<div class="container voting-question">	
-		<img src="assets/img/voting/1.jpg" class="img-thumbnail" style="float: right;">
-		<h1>Title</h1>
-		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor turpis a quam sollicitudin, id venenatis erat scelerisque. Donec semper est fermentum dapibus vulputate. </h4>
+		<img src="{{ event.imgFileName }}" class="img-thumbnail" style="float: right;">
+		<h1>{{ event.title }}</h1>
+		<h4>{{ event.title }} </h4>
 	</div>
 
 	<div class="container">

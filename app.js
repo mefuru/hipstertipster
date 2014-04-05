@@ -35,7 +35,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/about', routes.about);
 app.get('/quiz', routes.quiz);
-app.get('/item', routes.item);
+app.get('/item/:eventId', routes.item);
 app.get('/contact', routes.contact);
 app.get('/addevent', routes.addevent);
 app.get('/vote/:eventId', routes.vote);
