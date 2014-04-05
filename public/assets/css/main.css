@@ -3,6 +3,10 @@
   .voting {
     width: 800px;
   }
+
+  .feed #img_container {
+    width: 49%;
+  }
 }
 @media (min-width: 992px) {
   .voting {
@@ -13,16 +17,31 @@
   .voting {
     width: 800px;
   }
+
+  .feed #img_container {
+    width: 33%;
+  }
+
 }
 
 .voting .img-thumbnail {
   width: 49%;
 }
-/*
-.feed .img-thumbnail {
-  width: 49%;
+
+
+.feed #img_container {
+    position:relative;
+    display:inline-block;
+    text-align:center;
 }
-*/
+
+.button {
+    position:absolute;
+    top:40px;
+    right:10px;
+}
+
+
 .feed a{
     position:relative;
 
