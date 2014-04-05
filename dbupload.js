@@ -38,17 +38,15 @@ var events = [
     {title: 'Salt beef sandwhichs and cocktails at Mishkin\'s', img: '30.jpg', desc: 'Cocktails at this homage to a Jewish Deli'}
 ];
 
-MongoClient.connect(uri, function (err, db) {
-    if (err) throw err;
-    var votes = db.collection("votes");
-
-    events.forEach(function (event) {
+events.forEach(function (event) {
+    MongoClient.connect(uri, function (err, db) {
+        if (err) throw err;
+        var votes = db.collection("votes");
         votes.insert({title: event.title, imgFileName: event.img, description: event.desc, votes: 0}, function (err, doc) {
             if (err) throw err;
             console.log(doc);
+            db.close();
         });
     });
-
-    db.close();
 });
 
