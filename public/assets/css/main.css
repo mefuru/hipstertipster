@@ -13,6 +13,11 @@ h3 {
     padding-right: 45px;
 }
 
+h3 a,
+h3 a:hover {
+    color: black;
+}
+
 @media (min-width: 400px) {
 
     .voting .img-thumbnail {
@@ -49,13 +54,15 @@ h3 {
     }
 }
 
-.feed #img_container {
+#img_container {
     position: relative;
     display: inline-block;
     text-align: center;
+    max-width: 400px;
 }
 
-.vote {
+.vote,
+.vote:hover {
     position: absolute;
     bottom: 30px;
     right: 20px;
@@ -66,13 +73,20 @@ h3 {
 
 .progress {
     border-radius: 0;
-    padding: 5px;
+    background: transparent;
+    margin-bottom: 0;
+    height: 15px;
 }
 
 .progress-bar {
-    background-color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-    height: 10px;
+    height: 100%;
+    background-color: #ff00de;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff00de), to(#fff));
+    background-image: -webkit-linear-gradient(top, #ff00de, #fff);
+    background-image: linear-gradient(top, #ff00de, #fff);
+    display: inline-block;
+    box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;
+    -webkit-animation: animate-glow 1s ease-out infinite;
 }
 
 .feed {
@@ -119,10 +133,6 @@ img.grayscale {
     border: none;
     padding: 0;
     border-radius: 0;
-}
-
-.progress {
-    margin-bottom: 10px;
 }
 
 .anchor {
