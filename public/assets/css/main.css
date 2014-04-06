@@ -14,72 +14,82 @@ h3 {
 }
 
 @media (min-width: 400px) {
-  .voting {
-    width: 400px;
-  }
 
-  .feed #img_container {
-    width: 100%;
-  }
+    .voting .img-thumbnail {
+      width: 100%;
+    }
+
+    .feed #img_container {
+        width: 100%;
+    }
 }
 
 @media (min-width: 800px) {
-  .voting {
-    width: 800px;
-  }
 
-  .feed #img_container {
-    width: 49%;
-  }
+    .voting .img-thumbnail {
+      width: 49%;
+    }
+
+    .feed #img_container {
+        width: 49%;
+    }
 }
 
-@media (min-width: 1200px) {
-  .voting {
-    width: 800px;
-  }
+@media (min-width: 1270px) {
+    /*.voting {
+        width: 1000px;
+    }*/
 
-  .feed #img_container {
-    width: 33%;
-  }
+    .feed #img_container {
+        width: 33%;
+    }
+
+    .voting .img-thumbnail {
+      width: 33%;
+    }
 }
-
 
 .feed #img_container {
-    position:relative;
-    display:inline-block;
-    text-align:center;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
 .vote {
-    position:absolute;
-    bottom:60px;
-    right:20px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+.feed {
+    position: relative;
+
 }
 
 
-.feed{
-    position:relative;
-
-}
-.feed a p{
-    top:0;
-    left:0;
+.feed a p {
+    top: 0;
+    left: 0;
     position: absolute;
 }
+
 .show {
-  display:block;
+    display: block;
 }
 
 .hide {
-  display: none;
+    display: none;
 }
 
-.navbar-toggle{
-  background-color: #000;
+.navbar-toggle {
+    background-color: #000;
 }
 
 .navbar-toggle .icon-bar {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 img.grayscale {
@@ -89,7 +99,25 @@ img.grayscale {
 }
 
 .hiploaded {
-  position: absolute;
-  bottom: 150px;
-  right: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+}
+
+.img-thumbnail {
+    border: none;
+}
+
+.progress {
+    margin-bottom: 10px;
+}
+
+.anchor {
+    display: block;
+    content: " ";
+    margin-top: -85px;
+    height: 85px;
+    visibility: hidden;
 }
