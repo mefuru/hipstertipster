@@ -54,10 +54,11 @@ h3 a:hover {
     }
 }
 
-.feed #img_container {
+#img_container {
     position: relative;
     display: inline-block;
     text-align: center;
+    max-width: 400px;
 }
 
 .vote,
