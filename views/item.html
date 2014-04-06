@@ -1,27 +1,17 @@
 {% extends '../views/layout.html' %}
 
 {% block content %}
-
-
-			
-
-	<br /><br /><br /><br /><br /><br />
-	<div class="container voting-question">	
-		<img src="/images/{{ event.imgFileName }}" class="img-thumbnail" style="float: right;">
-		<h1>{{ event.title }}</h1>
-		<h4>{{ event.title }} </h4>
-	</div>
-
-	<div class="container">
-	</div><br /><br />
-
-
-
-	<div id="gmap_canvas" style="height:500px; width:100%;"></div>
-	<script>
-		init_map(14, new google.maps.LatLng(40.8054567, -73.96547470000002), "gmap_canvas")
-	</script>
+<br /><br /><br /><br /><br /><br />
+<div class="container voting-question">	
+  <img src="/images/{{ event.imgFileName }}" class="img-thumbnail" style="float: right;">
+  <h1>{{ event.title }}</h1>
+  <h4>{{ event.title }} </h4>
+</div>
+<div class="container">
+</div><br /><br />
+<div id="gmap_canvas" style="height:500px; width:100%;"></div>
+<script>
+  init_map(14, new google.maps.LatLng({{ event.loc[0]}}, {{event.loc[1]}}),  "gmap_canvas", "{{event.title}}")
+</script>
 <br /><br />
-
-
 {% endblock %}
