@@ -77,8 +77,8 @@
           {% for i, event in events %}
 	  <div id="img_container">
 	    <a class="anchor" name="{{ event._id.toHexString() }}"></a>
-	    {% if event.votes == 6 %}
-	    <h3>{{ i+1 }} Hiploaded!</h3>
+	    {% if event.votes >= 6 %}
+	    <h3>Hiploaded!</h3>
 	    <img src="/images/{{ event.imgFileName }}" class="img-thumbnail grayscale">
             <img src="images/hiploaded.png" class="hiploaded"/>
             <div class="progress" style="visibility: hidden">
@@ -87,7 +87,7 @@
               </div>
             </div>
             {% else %}
-	    <h3>{{ i+1 }} {{ event.title }}</h3>
+	    <h3><a href="/vote/{{ event._id.toHexString() }}">{{ event.title }}</a></h3>
           <a class="vote" href="/vote/{{ event._id.toHexString() }}">&#8679;</a>
           <a href="/item/{{ event._id.toHexString() }}"><img src="/images/{{ event.imgFileName }}" class="img-thumbnail"></a>
             <div class="progress">
