@@ -103,3 +103,11 @@ img.grayscale {
 .progress {
     margin-bottom: 10px;
 }
+
+.anchor {
+    display: block;
+    content: " ";
+    margin-top: -85px;
+    height: 85px;
+    visibility: hidden;
+}
