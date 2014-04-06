@@ -44,7 +44,7 @@ var loadEvents = function() {
         var i = events.length;
 
         events.forEach(function (event) {
-            votes.insert({title: event.title, imgFileName: event.img, description: event.desc, votes: event.votes || 0, loc: event.loc}, function (err, doc) {
+            votes.insert({title: event.title, imgFileName: event.img, description: event.desc, votes: Math.floor(Math.random() * (5 + 1)), loc: event.loc}, function (err, doc) {
                 if (err) throw err;
                 console.log(doc);
                 i--;
@@ -63,3 +63,5 @@ MongoClient.connect(uri, function (err, db) {
         loadEvents();
     });
 });
+
+loadEvents();
