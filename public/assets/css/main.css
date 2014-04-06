@@ -99,3 +99,7 @@ img.grayscale {
 .img-thumbnail {
     border: none;
 }
+
+.progress {
+    margin-bottom: 10px;
+}
