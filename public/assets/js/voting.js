@@ -8,7 +8,7 @@ console.log(NUMBER_OF_QUESTIONS);
 images_clicked = 0
 total_image_weighting = 0
 
-NON_HIPSTER_ANSWERS = ['<img src="/assets/img/voting/non-hipster.jpg" class="img-thumbnail">']
+NON_HIPSTER_ANSWERS = ['<center><h2>Sorry, maybe you should ...</h2><img src="/assets/img/voting/non-hipster.jpg" class="img-thumbnail"></center>']
 HIPSTER_ANSWERS = ['Welcome, redirect to main site']
 
 $('#vote_count').html(NUMBER_OF_QUESTIONS)

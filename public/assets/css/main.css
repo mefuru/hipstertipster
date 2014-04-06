@@ -14,8 +14,9 @@ h3 {
 }
 
 @media (min-width: 400px) {
-    .voting {
-        width: 400px;
+
+    .voting .img-thumbnail {
+      width: 100%;
     }
 
     .feed #img_container {
@@ -24,8 +25,9 @@ h3 {
 }
 
 @media (min-width: 800px) {
-    .voting {
-        width: 800px;
+
+    .voting .img-thumbnail {
+      width: 49%;
     }
 
     .feed #img_container {
@@ -33,13 +35,17 @@ h3 {
     }
 }
 
-@media (min-width: 1200px) {
-    .voting {
-        width: 800px;
-    }
+@media (min-width: 1270px) {
+    /*.voting {
+        width: 1000px;
+    }*/
 
     .feed #img_container {
         width: 33%;
+    }
+
+    .voting .img-thumbnail {
+      width: 33%;
     }
 }
 
@@ -59,6 +65,7 @@ h3 {
     position: relative;
 
 }
+
 
 .feed a p {
     top: 0;
