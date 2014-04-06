@@ -96,6 +96,6 @@ img.grayscale {
     margin-left: -150px;
 }
 
-.img_thumbnail {
-    border-right: none;
+.img-thumbnail {
+    border: none;
 }

@@ -81,9 +81,9 @@
 	    <h3>{{ i+1 }} Hiploaded!</h3>
 	    <img src="/images/{{ event.imgFileName }}" class="img-thumbnail grayscale">
             <img src="images/hiploaded.png" class="hiploaded"/>
-            <div class="progress">
+            <div class="progress" style="visibility: hidden">
               <div class="progress-bar progress-bar-danger" style="width: {{event.votes/6 * 100}}%">
-                <span class="sr-only">20% Complete (success)</span>
+                <span class="sr-only">100% Complete (success)</span>
               </div>
             </div>
             {% else %}
