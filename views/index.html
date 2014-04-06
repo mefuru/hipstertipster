@@ -88,7 +88,7 @@
             </div>
             {% else %}
 	    <h3>{{ i+1 }} {{ event.title }}</h3>
-          <a class="vote" href="/vote/{{ event._id.toHexString() }}"><img src="/images/up.png" height="100"/></a>
+          <a class="vote" href="/vote/{{ event._id.toHexString() }}">&#8679;</a>
           <a href="/item/{{ event._id.toHexString() }}"><img src="/images/{{ event.imgFileName }}" class="img-thumbnail"></a>
             <div class="progress">
               <div class="progress-bar progress-bar-danger" style="width: {{event.votes/6 * 100}}%">
